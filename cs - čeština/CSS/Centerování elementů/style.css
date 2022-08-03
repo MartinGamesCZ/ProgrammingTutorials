@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+}
+
+/* Náš parent element */
+.parent {
+    /* Základní styly - 500x500px a červená barva */
+    width: 500px;
+    height: 500px;
+    background: #f00;
+
+    /* Vycenterování veškerého obsahu tohoto elementu */
+    display: flex; /* Nastaví display na flex */
+    flex-direction: row; /* Nastaví "směr" elementů, lze použít i column */
+    justify-content: center; /* Vycenterování horizontálně (pokud je direction na column, pak vertikálně) */
+    align-items: center; /* vycenterování vertikálně (pokud je direction na column, pak horizontálně) */
+}
+
+/* Element co chceme vycentrovat */
+.child {
+    /* Základní styly - 100x100px a zelená barva */
+    width: 100px;
+    height: 100px;
+    background: #0f0;
+}

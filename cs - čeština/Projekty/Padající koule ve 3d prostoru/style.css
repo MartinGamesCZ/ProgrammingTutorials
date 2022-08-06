@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    overflow: hidden;
+}
+
+.root {
+    background: rgb(28, 27, 27);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ball {
+    background: radial-gradient(rgb(94, 240, 57), rgb(62, 116, 47));
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: myAnimation 5s ease-in-out 0s infinite normal forwards;
+    z-index: 1000;
+}
+
+.floor {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    height: 300px;
+    background: linear-gradient(rgb(44, 44, 44), rgb(77, 77, 77));
+    z-index: 100;
+}
+
+.wall1 {
+    width: 50vw;
+    height: 100vh;
+    background: rgb(60, 60, 60);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wall1::after {
+    content: "";
+    background: transparent;
+    bottom: -578px;
+    border: 780px solid transparent;
+    border-right: 0;
+    border-top: 100px solid rgb(60, 60, 60);
+    right: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+.wall2 {
+    width: 50vw;
+    height: 100vh;
+    background: rgb(73, 73, 73);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wall2::after {
+    content: "";
+    background: transparent;
+    bottom: -578px;
+    border: 780px solid transparent;
+    border-left: 0;
+    border-top: 100px solid rgb(73, 73, 73);
+    left: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+@keyframes myAnimation {
+    0% {
+        transform: translateY(-300px);
+        height: 100px;
+    }
+    13% {
+        height: 100px;
+    }
+    15% {
+        transform: translateY(200px);
+        height: 80px;
+    }
+    30% {
+        transform: translateY(100px);
+        height: 100px;
+    }
+    47% {
+        height: 100px;
+    }
+    50% {
+        transform: translateY(200px);
+        height: 90px;
+    }
+    65% {
+        transform: translateY(150px);
+        height: 100px;
+    }
+    78% {
+        height: 100px;
+    }
+    80% {
+        transform: translateY(200px);
+        height: 95px;
+    }
+    85% {
+        height: 100px;
+    }
+    90% {
+        transform: translateY(190px);
+    }
+    100% {
+        transform: translateY(200px);
+        height: 100px;
+    }
+}

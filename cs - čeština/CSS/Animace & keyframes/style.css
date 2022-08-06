@@ -1,0 +1,36 @@
+* {
+    margin: 0; /* Nastavení marginu všech elementů */
+}
+
+.container {
+    width: 100vw; /* Nastaví šířku elementu na šířku okna */
+    height: 100vh; /* Nastaví výšku elementu na výšku okna */
+    background: rgb(46, 46, 46); /* Nastaví barvu pozadí */
+
+    display: flex;              /*  ⮧                       */
+    justify-content: center;    /*  Udělá element centered  */
+    align-items: center;        /* ⮥                        */
+}
+
+.target {
+    width: 100px; /* Nastaví šířku elementu na 100px */
+    height: 100px; /* Nastaví výšku elementu na 100px */
+    background: rgb(54, 161, 54); /* Nastaví barvu elementu */
+    animation: mojeAnimace 5s infinite;
+}
+
+@keyframes mojeAnimace { /* Vytvoří animaci "mojeAnimace" */
+    0% { /* Začátek animace */
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    50% { /* Prostředek animace*/
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+
+    100% { /* Konec animace */
+        opacity: 1;
+    }
+}
